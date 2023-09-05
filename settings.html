@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Settings</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Sensor Settings</h1>
+    <form method="post" action="/settings">
+        <div class="form-group">
+            <label for="SENSOR_LOCATION_NAME">Sensor Location Name</label>
+            <input type="text" class="form-control" id="SENSOR_LOCATION_NAME" name="SENSOR_LOCATION_NAME" value="{{ settings.SENSOR_LOCATION_NAME }}">
+        </div>
+        <div class="form-group">
+            <label for="MINUTES_BETWEEN_READS">Minutes Between Reads</label>
+            <input type="number" class="form-control" id="MINUTES_BETWEEN_READS" name="MINUTES_BETWEEN_READS" value="{{ settings.MINUTES_BETWEEN_READS }}">
+        </div>
+        <div class="form-group">
+            <label for="SENSOR_THRESHOLD_TEMP">Sensor Upper Threshold Temperature (°F)</label>
+            <input type="number" class="form-control" id="SENSOR_THRESHOLD_TEMP" name="SENSOR_THRESHOLD_TEMP" value="{{ settings.SENSOR_THRESHOLD_TEMP }}">
+        </div>
+        <div class="form-group">
+            <label for="SENSOR_LOWER_THRESHOLD_TEMP">Sensor Lower Threshold Temperature (°F)</label>
+            <input type="number" class="form-control" id="SENSOR_LOWER_THRESHOLD_TEMP" name="SENSOR_LOWER_THRESHOLD_TEMP" value="{{ settings.SENSOR_LOWER_THRESHOLD_TEMP }}">
+        </div>
+        <div class="form-group">
+            <label for="THRESHOLD_COUNT">Threshold Count</label>
+            <input type="number" class="form-control" id="THRESHOLD_COUNT" name="THRESHOLD_COUNT" value="{{ settings.THRESHOLD_COUNT }}">
+        </div>
+        <div class="form-group">
+            <label for="SLACK_USERS_TO_TAG">Slack Users to Tag</label>
+            <input type="text" class="form-control" id="SLACK_USERS_TO_TAG" name="SLACK_USERS_TO_TAG" value="{{ ' '.join(settings.SLACK_USERS_TO_TAG) }}">
+        </div>
+        <div class="form-group">
+            <label for="SLACK_CHANNEL">Slack Channel</label>
+            <input type="text" class="form-control" id="SLACK_CHANNEL" name="SLACK_CHANNEL" value="{{ settings.SLACK_CHANNEL }}">
+        </div>
+        <button type="submit" class="btn btn-primary">Update Settings</button>
+    </form>
+</div>
+
+</body>
+</html>
