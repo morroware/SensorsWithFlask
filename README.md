@@ -24,10 +24,10 @@ This repository contains a Raspberry Pi script to read data from a BME280 sensor
 ## Hardware Setup
 
 1. **Connect the BME280 Sensor to the Raspberry Pi:**
-   - Connect the \`VCC\` pin of the BME280 to the `3.3V` pin on the Raspberry Pi.
-   - Connect the \`GND\` pin of the BME280 to any `GND` pin on the Raspberry Pi.
-   - Connect the \`SDA\` pin of the BME280 to the `SDA` pin (GPIO 2) on the Raspberry Pi.
-   - Connect the \`SCL\` pin of the BME280 to the `SCL` pin (GPIO 3) on the Raspberry Pi.
+   - Connect the `VCC` pin of the BME280 to the `3.3V` pin on the Raspberry Pi.
+   - Connect the `GND` pin of the BME280 to any `GND` pin on the Raspberry Pi.
+   - Connect the `SDA` pin of the BME280 to the `SDA` pin (GPIO 2) on the Raspberry Pi.
+   - Connect the `SCL` pin of the BME280 to the `SCL` pin (GPIO 3) on the Raspberry Pi.
 
 2. Power on the Raspberry Pi.
 
